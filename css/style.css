@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #container_lista{
+    height: 100%;
+}
+
+
+.list-group-item{
+    list-style: none;
+    font-size: 30px;
+    color: rgb(232, 232, 232);
+}
