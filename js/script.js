@@ -9,11 +9,14 @@ Vc exclui o dado e ela se atualiza
 Sem dar refresh na página
 */
 
+
+
 let listaTodos = Array()
 listaTodos = []
 
 console.log(listaTodos)
 
+// Adiciona um item na lista
 function inserirDado() {
     let dadoNovo = document.querySelector('#campo').value
     let lista = document.querySelector('#lista')
@@ -21,8 +24,11 @@ function inserirDado() {
     let listaAtualizada = listaTodos
     listaAtualizada.push(dadoNovo)
 
+    let openModal = document.querySelector('#modalErro')
+
     if (dadoNovo === '') {
-        alert('Insira um valor válido!')
+        openModal.style.display = 'block'
+        document.querySelector('body').style.background = 'rgb(113, 113, 113)'
     }
     else {
         lista.classList.add('list-group-item')
@@ -33,10 +39,10 @@ function inserirDado() {
     }
 
     document.querySelector('#campo').value = ''
-
 }
 
 
+// remove item da lista
 function removerDado() {
     let lista = document.querySelector('#lista li')
     let listaAtualizada = listaTodos
@@ -45,5 +51,12 @@ function removerDado() {
     lista.parentNode.removeChild(lista)
 
     console.log(listaAtualizada)
+}
 
+
+// fechar modal
+function closeModal() {
+    let modal = document.querySelector('#modalErro')
+    modal.style.display = 'none'
+    document.querySelector('body').style.background = 'white'
 }

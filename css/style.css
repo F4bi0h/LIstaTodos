@@ -13,3 +13,41 @@ html, body, #container_lista{
     font-size: 30px;
     color: rgb(232, 232, 232);
 }
+
+
+.modal{
+    width: 50%;
+    height: 50%;
+    background: rgb(255, 215, 215);
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 22px;
+}
+
+.modal h2{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.modal p{
+    margin-bottom: 40px;
+}
+
+#modalErro{
+    display: none;
+    animation: modal;
+    animation-duration: 850ms;
+}
+
+
+@keyframes modal {
+    from {
+        opacity: 1;
+    }
+
+    from {
+        opacity: 0;
+    }
+}
