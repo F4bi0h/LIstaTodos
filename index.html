@@ -11,6 +11,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+
+    <script defer src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
 
     <title>Lista Todos</title>
@@ -22,8 +24,8 @@
         <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
             <div class="container">
 
-                <a href="#" class="navbar-brand">
-                    <i class="fab fa-list"></i>
+                <a href="#" class="navbar-brand text-white">
+                    <i class="fab fa-searchengin"></i>
                 </a>
 
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
@@ -36,7 +38,7 @@
                             <a href="#" class="nav-link text-white">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">Consulta</a>
+                            <a href="consulta.html" class="nav-link text-white">Consulta</a>
                         </li>
                     </ul>
                 </div>
@@ -53,59 +55,71 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
-                    <h2 class="display-4 mt-4"><span class="text-primary">Minha</span> Lista</h2>
-
-                    <!-- Área Lista -->
-                    <div class="area_lista">
-
-                        <div class="input-group mb-4">
-                            <input id="campo" type="text" class="form-control form-control-lg">
-                            <div class="input-group-append mr-1">
-                                <button type="button" class="btn btn-info" onclick="inserirDado()">Inserir</button>
-                            </div>
-                            <div class="input-group-append">
-                                <button type="button" class="btn btn-info" onclick="removerDado()">Remover</button>
-                            </div>
-                        </div>
-
-                        <div id="modalErro" class="modal">
-                            <h2 class="display-3 text-danger">Erro!</h2>
-                            <p class="text-danger">Verifique se você preencheu o campo corretamente.</p>
-                            <button class="btn btn-lg btn-danger" onclick="closeModal()">Voltar</button>
-                        </div>
-
-                        <div class="mt-2 mb-4">
-                            <ul id="lista">
-
-                            </ul>
-                        </div>
-
-
-                    </div>
-                    <!-- Área Lista -->
-
+                    <h2 class="display-4 mt-4 mb-5"><span class="text-primary">Minha</span> Lista</h2>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <select name="" id="ano" class="form-control">
+                        <option value="">Ano</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <select name="" id="mes" class="form-control">
+                        <option value="">Mês</option>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <input type="text" id="dia" class="form-control" placeholder="Dia">
+                </div>
+
+                <div class="col-md-4">
+                    <select name="" id="tipo" class="form-control">
+                        <option value="">Tipo</option>
+                        <option value="1">Alimentação</option>
+                        <option value="2">Lazer</option>
+                        <option value="3">Educação</option>
+                        <option value="4">Transporte</option>
+                        <option value="5">Saúde</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-md-9">
+                    <input type="text" id="descricao" class="form-control" placeholder="Descrição">
+                </div>
+
+                <div class="col-md-3 d-flex justify-content-end">
+                    <button class="btn btn-primary" onclick="cadastrarItem()">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal">
         </div>
     </section>
     <!-- container_lista -->
 
-
-
-    <!-- rodapé -->
-    <footer>
-        <div>
-            <div>
-                <div></div>
-            </div>
-        </div>
-    </footer>
-    <!-- rodapé -->
-
-    <script src="js/script.js"></script>
-
-
+ 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

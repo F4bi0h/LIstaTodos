@@ -1,48 +1,25 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 html, body, #container_lista{
     height: 100%;
 }
 
-
-.list-group-item{
-    list-style: none;
-    font-size: 30px;
-    color: rgb(232, 232, 232);
+#container_lista{
+    background-color: rgb(205, 205, 205);
 }
-
 
 .modal{
     width: 50%;
     height: 50%;
-    background: rgb(255, 215, 215);
-    border-radius: 10px;
+    display: none;
     margin: auto;
     text-align: center;
-    padding: 10px;
-    font-size: 22px;
-}
-
-.modal h2{
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-.modal p{
-    margin-bottom: 40px;
-}
-
-#modalErro{
-    display: none;
-    animation: modal;
+    padding: 9% 5px 0 5px;
+    border-radius: 5px;
+    color: white;
+    animation: showModal;
     animation-duration: 850ms;
 }
 
-
-@keyframes modal {
+@keyframes showModal {
     from {
         opacity: 1;
     }
